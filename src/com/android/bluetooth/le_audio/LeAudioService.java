@@ -1106,9 +1106,9 @@ public class LeAudioService extends ProfileService {
         ActiveDeviceManagerServiceIntf activeDeviceManager =
                                             ActiveDeviceManagerServiceIntf.get();
         mActiveAudioOutDevice =
-            activeDeviceManager.getActiveDevice(ApmConstIntf.AudioFeatures.MEDIA_AUDIO);
+            activeDeviceManager.getActiveAbsoluteDevice(ApmConstIntf.AudioFeatures.MEDIA_AUDIO);
         mActiveAudioInDevice =
-            activeDeviceManager.getActiveDevice(ApmConstIntf.AudioFeatures.CALL_AUDIO);
+            activeDeviceManager.getActiveAbsoluteDevice(ApmConstIntf.AudioFeatures.CALL_AUDIO);
 
         activeDevices.add(0, mActiveAudioOutDevice);
         activeDevices.add(1, mActiveAudioInDevice);
